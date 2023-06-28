@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+    <title>About us</title>
+</head>
+    <div class="heading">
+        <nav class="nav">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Back</a>
+          </nav>
+        <h1>About us</h1>
+        <p>Welcome all to About us page of Online food grocery shop</p>
+    </div>
+    <section class="about-us">
+        <img src="{% static 'veggie.webp' %}">
+        <div class="content">
+            <h2>There is some information related our shop</h2>
+            <p>Online shopping has been known as a rapidly growing business, and although online grocery shopping has not followed 
+                these same growth patterns in the past, it is now being recognized for its potential. As such, 
+                the focus of previous online shopping research has seldom encompassed this specific retail market, with 
+                the existing studies focusing essentially on consumers’ motivations and attitudes, rather than how consumers 
+                actually shop for groceries online. Therefore, this dissertation has the objective of uncovering some of the details 
+                of consumer decision making processes for this specific online retail market, details which can help further both academic 
+                research and managerial knowledge.</p>
+                <button class="read-more-btn">Read More</button>
+        </div>
+    </section>
+    <body>
+</body>
+</html>

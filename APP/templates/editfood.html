@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit here</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>welcome all to employe form</h1>
+        <form method="POST" action="/update/{{data.id}}">
+            <table class="table table-success table-striped">
+                {% csrf_token %}
+                <tr>
+                    <td> <label>Food_Id</label></td>
+                    <td><input type="text" name="fid" value="{{data.fid}}" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label>Customer_name</label></td>
+                    <td><input type="text" name="cname" value="{{data.Customer_name}}" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label>Product_name</label></td>
+                    <td> <input type="text" name="pname" value="{{data.Product_name}}" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label>Product_quntity</label></td>
+                    <td> <input type="text" name="pq" value="{{data.Product_quntity}}" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label>Product_prize</label></td>
+                    <td> <input type="number" name="prize" value="{{data.Product_prize}}" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label>Address</label></td>
+                    <td> <input type="text" name="add" value="{{data.address}}" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label>Date_and_Time</label></td>
+                    <td> <input type="datetime-local" name="dt" value="{{data.Date_time}}" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" class="btn btn-success">Update</button></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

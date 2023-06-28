@@ -1,0 +1,18 @@
+body{
+  font-family: arial;
+  font-size: 16px;
+  margin: 0px;
+  background: #2793d2;
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+.input_container{
+  width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  border: 10px solid #41b9ff;
+}

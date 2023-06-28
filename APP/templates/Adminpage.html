@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'admin.css' %}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body  background="{% static 'ginger.jpg' %}">
+    <header>
+        <div class="container bg-subtle bg-warning">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Food</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{% url 'food' %}">ADD FOOD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'viewfood' %}">VIEW FOOD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'viewreg' %}">VIEW USER</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">VIEW USERS ORDER</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'home' %}">LOGOUT</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        LOGIN
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{% url 'login' %}">Admin Login</a></li>
+                                        <li><a class="dropdown-item" href="#">User Login</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </nav>
+        </div>
+        {% block content %}
+
+
+        {% endblock %}
+        <h1 class="title">Recommeded for you</h1>
+
+        <div class="dashboard-content">
+            <div class="dashboard-card">
+                <img src="{% static 'onion.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">ONION</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">TOMATO</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'masala.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">MASALA</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'mirchi.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">MIRCHI</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'carrot.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">CARROT</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'fish.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">FISH</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'LADY.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">LADYFINGER</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="dashboard-card">
+                <img src="{% static 'apple.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">APPLE</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'ginger.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">GINGER</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'capsicum.webp' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">CAPSICUM</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'pumpkin.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">PUMPKIN</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'orange.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">ORANGE</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

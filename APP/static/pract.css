@@ -1,0 +1,21 @@
+header{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+   url('veg.jpg');
+   background-size: cover;
+   background-attachment: fixed;
+}
+.dashboard-content{
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.card-img-top{
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
