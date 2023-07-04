@@ -16,6 +16,11 @@
 <body>
   <header>
     <div class="container-fluid bg-warning text-black text-center">
+      {% if messages %}
+      {% for message in messages %}
+      <h3>Successfully logged out </h3>
+      {% endfor %}
+      {% endif %}
       <h2>hello!!</h2>
       <h4>Welcome all to Food Grocery Shop</h4>
     </div>
@@ -34,13 +39,10 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'about' %}">ABOUT US</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT US</a>
+                <a class="nav-link" href="{% url 'contact' %}">CONTACT US</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'feed' %}">FEEDBACK</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'display' %}">VIEW FEEDBACK</a>
               </li>
             </ul>
 
@@ -111,6 +113,12 @@
       </div>
       <div class="dashboard-card">
         <img src="{% static 'orange.jpg' %}" class="card-img-top">
+      </div>
+      <div class="dashboard-card">
+        <img src="{% static 'grape.jpg' %}" class="card-img-top">
+      </div>
+      <div class="dashboard-card">
+        <img src="{% static 'tomato.jpg' %}" class="card-img-top">
       </div>
     </div>
   </header>

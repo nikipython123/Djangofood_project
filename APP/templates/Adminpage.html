@@ -13,7 +13,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body  background="{% static 'ginger.jpg' %}">
+<body>
     <header>
         <div class="container bg-subtle bg-warning">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -36,24 +36,14 @@
                                 <a class="nav-link" href="{% url 'viewreg' %}">VIEW USER</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">VIEW USERS ORDER</a>
+                                <a class="nav-link" href="{% url 'display' %}">VIEW FEEDBACK</a>
                             </li>
                         </ul>
 
                         <div class="d-flex">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'home' %}">LOGOUT</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        LOGIN
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="{% url 'login' %}">Admin Login</a></li>
-                                        <li><a class="dropdown-item" href="#">User Login</a></li>
-                                    </ul>
+                                    <a class="nav-link" href="{% url 'out' %}">LOGOUT</a>
                                 </li>
                             </ul>
                         </div>
@@ -73,7 +63,6 @@
                     <h5 class="card-title">ONION</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -82,7 +71,6 @@
                     <h5 class="card-title">TOMATO</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -91,16 +79,14 @@
                     <h5 class="card-title">MASALA</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
-                <img src="{% static 'mirchi.jpg' %}" class="card-img-top">
+                <img src="{% static 'apple.jpg' %}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">MIRCHI</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -109,36 +95,24 @@
                     <h5 class="card-title">CARROT</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
-                <img src="{% static 'fish.jpg' %}" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">FISH</h5>
-                    <p class="card-text">GOOD QUALITY PRODUCT</p>
-                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
-                </div>
-            </div>
-            <div class="dashboard-card">
-                <img src="{% static 'LADY.jpg' %}" class="card-img-top">
+                <img src="{% static 'lady.jpg' %}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">LADYFINGER</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
         </div>
         <div class="dashboard-content">
             <div class="dashboard-card">
-                <img src="{% static 'apple.jpg' %}" class="card-img-top">
+                <img src="{% static 'mirchi.jpg' %}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">APPLE</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -147,7 +121,6 @@
                     <h5 class="card-title">GINGER</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -156,7 +129,6 @@
                     <h5 class="card-title">CAPSICUM</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -165,7 +137,6 @@
                     <h5 class="card-title">PUMPKIN</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -174,7 +145,14 @@
                     <h5 class="card-title">ORANGE</h5>
                     <p class="card-text">GOOD QUALITY PRODUCT</p>
                     <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
-                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="{% static 'grape.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">ORANGE</h5>
+                    <p class="card-text">GOOD QUALITY PRODUCT</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15 to 30 mins</p>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@
 <body background="{% static 'adminpic.jpg' %}">
     <div class="input_container">
     <h3>User login</h3>
-    <form method="post" action="authuser">
+    <form method="post" action="userlogin">
         {% csrf_token %}
         <label for="Username">Username</label>
         <input type="text" id="uname" name="uname"><br><br>
